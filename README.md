@@ -11,6 +11,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Explanation of Key Components](#explanation-of-key-components)
+- [Data Availability](#data-availability)
 - [File Structure](#file-structure)
 - [Contributing](#contributing)
 - [License](#license)
@@ -84,13 +85,17 @@ This will start a local server. Open your browser and navigate to `http://localh
 - **Similarity Calculation:** TF-IDF Vectorizer, CountVectorizer, and KNN models are used to calculate similarities between the CV text and job descriptions.
 - **Weighted Scoring:** Final recommendations are based on a weighted combination of similarity scores.
 
+## Data Availability
+
+The job data used for this project was scraped using Selenium. However, due to various reasons, I am not sharing the scraped data or the code used for web scraping. Instead, I have provided a sample dataset (`job_recommendations.csv`) that can be used for basic tasks and testing the application.
+
 ## File Structure
 
 ```
 Job-Recommendation-System/
 │
 ├── app.py                # Main application file
-├── job_recommendations.csv  # Job data used for recommendations
+├── job_recommendations.csv  # Sample job data used for recommendations
 ├── requirements.txt      # Python dependencies
 ├── README.md             # Project documentation
 └── .gitignore            # Files and directories to ignore in Git
@@ -117,5 +122,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [pdfplumber](https://github.com/jsvine/pdfplumber) for PDF text extraction.
 - [NLTK](https://www.nltk.org/) for text preprocessing tools.
 - [Scikit-learn](https://scikit-learn.org/stable/) for machine learning libraries.
-```
-
