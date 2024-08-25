@@ -1,6 +1,4 @@
-Understood! Here's the complete `README.md` file with all the sections included in a single document, formatted correctly:
 
-```markdown
 # Job Recommendation System
 
 ![Job Recommendation System](https://img.shields.io/badge/Streamlit-v1.14.0-brightgreen) ![Python](https://img.shields.io/badge/Python-3.8-blue)
@@ -29,6 +27,7 @@ This project is a **Job Recommendation System** built using Streamlit, allowing 
 - **Machine Learning Models:** Utilizes TF-IDF Vectorizer, CountVectorizer, and K-Nearest Neighbors (KNN) to compute similarity scores and recommend jobs.
 - **Customizable Recommendations:** Users can select the number of job recommendations they wish to receive.
 - **Interactive UI:** Built with Streamlit for an intuitive user experience.
+- **User Feedback Loop:** Incorporates user feedback to refine and personalize future job recommendations.
 
 ## Requirements
 
@@ -52,7 +51,7 @@ To run this project locally, follow these steps:
 
 2. **Create a virtual environment:**
    ```bash
-   python -m venv venv
+   python3 -m venv venv
    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
    ```
 
@@ -61,62 +60,43 @@ To run this project locally, follow these steps:
    pip install -r requirements.txt
    ```
 
-4. **Download NLTK resources:**
-   ```python
-   import nltk
-   nltk.download('punkt')
-   nltk.download('stopwords')
-   nltk.download('wordnet')
+4. **Run the Streamlit app:**
+   ```bash
+   streamlit run candidate_app.py
    ```
 
 ## Usage
 
-To run the job recommendation system, execute the following command in your terminal:
-
-```bash
-streamlit run app.py
-```
-
-This will start a local server. Open your browser and navigate to `http://localhost:8501` to interact with the application.
+1. **Upload your CV:** Launch the app and upload your CV in PDF format.
+2. **Receive Recommendations:** The app will process your CV and generate job recommendations.
+3. **Provide Feedback:** Like or dislike the recommendations to help improve the accuracy of future recommendations.
+4. **Customize Output:** Use the slider to adjust the number of job recommendations displayed.
 
 ## Explanation of Key Components
 
-- **PDF Extraction:** The `pdfplumber` library is used to extract text from PDF files.
-- **Text Preprocessing:** The text is tokenized, stop words are removed, and lemmatization is performed using NLTK.
-- **Similarity Calculation:** TF-IDF Vectorizer, CountVectorizer, and KNN models are used to calculate similarities between the CV text and job descriptions.
-- **Weighted Scoring:** Final recommendations are based on a weighted combination of similarity scores.
+- **PDF Processing:** The system uses `pdfplumber` to extract text from PDF files.
+- **Text Preprocessing:** NLTK is used for tokenization, stopword removal, and lemmatization.
+- **TF-IDF and CountVectorizer:** These vectorizers are used to convert textual data into numerical form for similarity comparison.
+- **K-Nearest Neighbors (KNN):** KNN is used to identify the most similar job descriptions based on the CV content.
+- **Feedback Loop:** A simple feedback mechanism is implemented to collect user preferences and refine future recommendations.
 
 ## File Structure
 
-```
-job-recommendation-system/
-│
-├── app.py                # Main application file
-├── job_recommendations.csv  # Job data used for recommendations
-├── requirements.txt      # Python dependencies
-├── README.md             # Project documentation
-└── .gitignore            # Files and directories to ignore in Git
-```
+- `candidate_app.py`: Main application file that runs the Streamlit app.
+- `requirements.txt`: Lists all Python dependencies required to run the project.
+- `job_recommendations.csv`: Sample dataset containing job descriptions and related information.
 
 ## Contributing
 
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Make your changes.
-4. Commit your changes (`git commit -m 'Add new feature'`).
-5. Push to the branch (`git push origin feature-branch`).
-6. Open a pull request.
+Contributions are welcome! Please feel free to submit a Pull Request or open an Issue if you have suggestions for improvements or find any bugs.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 
-- [Streamlit](https://streamlit.io/) for the intuitive framework.
-- [pdfplumber](https://github.com/jsvine/pdfplumber) for PDF text extraction.
-- [NLTK](https://www.nltk.org/) for text preprocessing tools.
-- [Scikit-learn](https://scikit-learn.org/stable/) for machine learning libraries.
+Special thanks to the contributors and the open-source community for providing the tools and libraries that made this project possible.
 ```
+
+This `README.md` file provides a comprehensive overview of your Job Recommendation System, including installation instructions, usage guidelines, and details about the key components. You can now include this file in your project to help others understand how to set up and use your system.
