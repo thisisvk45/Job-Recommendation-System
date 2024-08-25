@@ -119,4 +119,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Scikit-learn](https://scikit-learn.org/stable/) for machine learning libraries.
 ```
 
-This `README.md` file is now updated with your GitHub repository URL for cloning and formatted to include all necessary sections. You can copy and paste this directly into your `README.md` file.
