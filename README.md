@@ -73,7 +73,7 @@ To run this project locally, follow these steps:
 To run the job recommendation system, execute the following command in your terminal:
 
 ```bash
-streamlit run app.py
+streamlit run candidate_app.py
 ```
 
 This will start a local server. Open your browser and navigate to `http://localhost:8501` to interact with the application.
