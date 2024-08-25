@@ -1,3 +1,6 @@
+Understood! Here's the complete `README.md` file with all the sections included in a single document, formatted correctly:
+
+```markdown
 # Job Recommendation System
 
 ![Job Recommendation System](https://img.shields.io/badge/Streamlit-v1.14.0-brightgreen) ![Python](https://img.shields.io/badge/Python-3.8-blue)
@@ -45,3 +48,75 @@ To run this project locally, follow these steps:
    ```bash
    git clone https://github.com/yourusername/job-recommendation-system.git
    cd job-recommendation-system
+   ```
+
+2. **Create a virtual environment:**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   ```
+
+3. **Install the required packages:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Download NLTK resources:**
+   ```python
+   import nltk
+   nltk.download('punkt')
+   nltk.download('stopwords')
+   nltk.download('wordnet')
+   ```
+
+## Usage
+
+To run the job recommendation system, execute the following command in your terminal:
+
+```bash
+streamlit run app.py
+```
+
+This will start a local server. Open your browser and navigate to `http://localhost:8501` to interact with the application.
+
+## Explanation of Key Components
+
+- **PDF Extraction:** The `pdfplumber` library is used to extract text from PDF files.
+- **Text Preprocessing:** The text is tokenized, stop words are removed, and lemmatization is performed using NLTK.
+- **Similarity Calculation:** TF-IDF Vectorizer, CountVectorizer, and KNN models are used to calculate similarities between the CV text and job descriptions.
+- **Weighted Scoring:** Final recommendations are based on a weighted combination of similarity scores.
+
+## File Structure
+
+```
+job-recommendation-system/
+│
+├── app.py                # Main application file
+├── job_recommendations.csv  # Job data used for recommendations
+├── requirements.txt      # Python dependencies
+├── README.md             # Project documentation
+└── .gitignore            # Files and directories to ignore in Git
+```
+
+## Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add new feature'`).
+5. Push to the branch (`git push origin feature-branch`).
+6. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+- [Streamlit](https://streamlit.io/) for the intuitive framework.
+- [pdfplumber](https://github.com/jsvine/pdfplumber) for PDF text extraction.
+- [NLTK](https://www.nltk.org/) for text preprocessing tools.
+- [Scikit-learn](https://scikit-learn.org/stable/) for machine learning libraries.
+```
